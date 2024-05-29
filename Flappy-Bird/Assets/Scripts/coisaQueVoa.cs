@@ -6,6 +6,17 @@ public class Bird : MonoBehaviour
 {
     [SerializeField]
     private float velocidade = 3;
+
+    [SerializeField]
+    private GameObject balaPrefab;
+
+    [SerializeField]
+    private Transform pontoTiro;
+
+    //[Range(0.1f, 1f)]
+    //[SerializeField] private float taxadeTiro = 0.5f;
+
+    private float fireTimer;
    //cria a variavel fisica do tipo Rigidbody
    Rigidbody2D fisica;
     
@@ -23,11 +34,21 @@ public class Bird : MonoBehaviour
             //chama o método impulsionar
             //o this serve para indicar que é o objeto ativo naquele momento que recerá ação
             this.Impulsionar();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
         }
     }
     //método que impulsiona nosso pássaro
     private void Impulsionar(){
     //adiciona a variável física e o método AddForce, adicionando uma força para cima do tipo impulso
         this.fisica.AddForce(Vector2.up * velocidade, ForceMode2D.Impulse);
+    }
+
+    private void Shoot()
+    {
+        Instantiate(balaPrefab, pontoTiro.position, pontoTiro.rotation);
     }
 }
