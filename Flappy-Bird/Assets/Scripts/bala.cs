@@ -24,6 +24,10 @@ public class bala : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = transform.right * velocidade;
+
+        Vector3 mouse = Input.mousePosition;
+        
+        Vector3 cordTela = Camera.main.WorldToScreenPoint(transform.localPosition);
     }
     // Update is called once per frame
     void Update()
