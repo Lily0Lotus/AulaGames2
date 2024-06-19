@@ -11,7 +11,7 @@ public class bala : MonoBehaviour
 
     [Range(1, 10)]
     [SerializeField]
-    private float tempoVida = 3f;
+    private float tempoVida = 1f;
 
     private Rigidbody2D rb;
 

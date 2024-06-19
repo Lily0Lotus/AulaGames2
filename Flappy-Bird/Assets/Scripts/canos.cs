@@ -33,16 +33,17 @@ public class cano : MonoBehaviour
 
         if (!this.ponto && this.transform.position.x < posicaoFrango.x)
         {
-            Debug.Log("AAAAA");
             this.ponto = true;
             this.scriptUI.adicionarPonto();
         }
-        this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        this.destruir();
+        if(other.gameObject.tag == "Finish")
+        {
+            this.destruir();
+        }
     }
 
     void destruir()
