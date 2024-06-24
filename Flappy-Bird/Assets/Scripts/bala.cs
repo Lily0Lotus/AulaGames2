@@ -9,7 +9,6 @@ public class bala : MonoBehaviour
     [SerializeField]
     private float velocidade = 10f;
 
-    [Range(1, 10)]
     [SerializeField]
     private float tempoVida = 1f;
 

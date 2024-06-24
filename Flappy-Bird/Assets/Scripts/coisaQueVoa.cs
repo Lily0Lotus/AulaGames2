@@ -8,7 +8,7 @@ public class Bird : MonoBehaviour
     private float velocidade = 3;
 
     [SerializeField]
-    private GameObject balaPrefab;
+    private GameObject eggPrefab;
 
     [SerializeField]
     private Transform pontoTiro;
@@ -48,6 +48,6 @@ public class Bird : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(balaPrefab, pontoTiro.position, pontoTiro.rotation);
+        Instantiate(eggPrefab, pontoTiro.position, pontoTiro.rotation);
     }
 }
