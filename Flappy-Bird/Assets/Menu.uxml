@@ -1,5 +1,7 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd">
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Fundo/Image.png?fileID=2800000&amp;guid=174f9ad63a35a4045b39ff1218948b39&amp;type=3#Image&quot;);">
         <ui:Label tabindex="-1" text="Flappy Gun" parse-escape-sequences="false" display-tooltip-when-elided="true" style="align-items: stretch; align-self: center; -unity-font: url(&quot;project://database/Assets/Font/Daydream.ttf?fileID=12800000&amp;guid=3322ff510276097459563f2515252f0f&amp;type=3#Daydream&quot;); -unity-font-definition: initial; font-size: 32px;" />
+        <ui:Button text="Jogar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnJogar" style="width: 150px; align-self: center; justify-content: flex-start; align-items: center; margin-top: 2px; top: 200px;" />
+        <ui:Button text="Extra :)" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnExtra" style="width: 150px; align-self: center; justify-content: flex-start; align-items: center; margin-top: 2px; top: 200px;" />
     </ui:VisualElement>
 </ui:UXML>
