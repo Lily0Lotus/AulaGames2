@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-public class menu : MonoBehaviour
+public class extra : MonoBehaviour
 {
     private UIDocument document;
     private Button botao;
@@ -12,12 +12,12 @@ public class menu : MonoBehaviour
     private void Awake()
     {
         document = GetComponent<UIDocument>();
-        botao = document.rootVisualElement.Q<Button>("btnJogar");
+        botao = document.rootVisualElement.Q<Button>("btnExtra");
         botao.RegisterCallback<ClickEvent>(onPlay);
     }
 
     void onPlay(ClickEvent evt)
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Extra");
     }
 }
