@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958b295439b30434bac1a35cb45f3f46, type: 3}
+  m_Name: Crystalmind
+  m_EditorClassIdentifier: 
+  SoulIcon: {fileID: 2800000, guid: 75a05ea9ea3f8c64d90769026f7d4dca, type: 3}
+  custo: 0
+  cooldown: 0
