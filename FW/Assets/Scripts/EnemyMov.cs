@@ -17,12 +17,13 @@ public class Inimigo : MonoBehaviour
 
     void Update()
     {
+        //Faz o inimigo se mover
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * spd * Time.deltaTime, Space.World);
 
-        /*if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
             Destroy(gameObject);
-        };*/
+        };
     }
 }
