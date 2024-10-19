@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -16,6 +18,7 @@ public class Visao : MonoBehaviour
 
     public int FreqScan = 30;
     public LayerMask layers;
+    public List<GameObject> objs = new List<GameObject>();
     Collider[] colliders = new Collider[50];
     int count;
     float interScan;
@@ -27,13 +30,6 @@ public class Visao : MonoBehaviour
     {
         interScan = 1f / FreqScan;
     }
-
-
-    private void Scan()
-    {
-        count = Physics.OverlapSphereNonAlloc(transform.position, alcance, colliders, layers, QueryTriggerInteraction.Collide);
-    }
-
     private void Update()
     {
         tempoScan -= Time.deltaTime;
@@ -43,6 +39,27 @@ public class Visao : MonoBehaviour
             Scan();
         }
 
+    }
+
+    private void Scan()
+    { 
+        count = Physics.OverlapSphereNonAlloc(transform.position, alcance, colliders, layers, QueryTriggerInteraction.Collide);
+        
+        objs.Clear();
+        for (int i = 0; i < count; i++)
+        {
+            GameObject obj = objs[i].gameObject;
+            if (noCampodeVisao(obj))
+            {
+                objs.Add(obj);
+            }
+        }
+
+    }
+    
+    public bool noCampodeVisao(GameObject obj)
+    {
+        return true;
     }
 
     Mesh CriarMalha()
@@ -130,6 +147,12 @@ public class Visao : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             Gizmos.DrawSphere(colliders[i].transform.position, 0.2f);
+        }
+
+        Gizmos.color = Color.green;
+        foreach (var obj in objs)
+        {
+            Gizmos.DrawSphere(obj.transform.position, 0.2f);
         }
     }
 }
