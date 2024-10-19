@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torre : MonoBehaviour
 {
-    private Transform alvo;
+    public Transform alvo;
     [SerializeField]
     public float alcance = 20f;
 
@@ -47,6 +47,8 @@ public class Torre : MonoBehaviour
             return;
         
     }
+
+    //cria uma esfera que haje como o campo de visão
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
