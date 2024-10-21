@@ -9,6 +9,7 @@ public class FOV : MonoBehaviour
     [Range(0, 360)]
     public float angulo;
 
+    [SerializeField]
     public GameObject sombraRef;
 
     public LayerMask mascaraAlvo;
