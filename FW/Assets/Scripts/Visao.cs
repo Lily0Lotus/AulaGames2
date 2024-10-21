@@ -65,8 +65,7 @@ public class Visao : MonoBehaviour
     Mesh CriarMalha()
     {
         Mesh mesh = new Mesh();
-
-        int numTriangulo = 8;
+        /*int numTriangulo = 8;
         int numVertices = numTriangulo * 3;
 
         Vector3[] vertices = new Vector3[numVertices];
@@ -126,7 +125,7 @@ public class Visao : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangulos;
-        mesh.RecalculateNormals();
+        mesh.RecalculateNormals();*/
         return mesh;
     }
 
@@ -152,7 +151,8 @@ public class Visao : MonoBehaviour
         Gizmos.color = Color.green;
         foreach (var obj in objs)
         {
-            Gizmos.DrawSphere(obj.transform.position, 0.2f);
+            Vector3 direction = transform.TransformDirection(Vector3.forward) * alcance;
+            Gizmos.DrawRay(transform.position, direction);
         }
     }
 }
