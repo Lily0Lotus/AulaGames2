@@ -8,7 +8,7 @@ public class Torre : MonoBehaviour
     [SerializeField]
     public float alcance = 20f;
 
-    public string tagInimigo = "Inimigo";
+    private string tagInimigo = "Inimigo";
     private void Start()
     {
         InvokeRepeating("atualizarTorre", 0f, 0.5f);

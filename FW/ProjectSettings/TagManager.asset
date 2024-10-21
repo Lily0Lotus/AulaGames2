@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inimigo
+  - "Obstru\xE7\xE3o"
   layers:
   - Default
   - TransparentFX
@@ -12,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Inimigo
+  - "Obstru\xE7\xE3o"
   - 
   - 
   - 

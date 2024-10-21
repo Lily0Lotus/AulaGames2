@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DebugDesenharEsfera : MonoBehaviour
 {
+    //desenha uma esfera
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
