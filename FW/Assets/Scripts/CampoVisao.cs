@@ -5,17 +5,25 @@ using UnityEngine;
 public class Torre : MonoBehaviour
 {
     public Transform alvo;
+
+    [Header("Atributos")]
     [SerializeField]
     public float alcance = 20f;
+    [SerializeField]
+    public float taxaDisparo = 4f;
+    [SerializeField]
+    private float cooldown = 0f;
 
+    [Header("campo de setup da unity")]
+    [SerializeField]
     private string tagInimigo = "Inimigo";
     private void Start()
     {
-        InvokeRepeating("atualizarTorre", 0f, 0.5f);
+        InvokeRepeating("atualizarAlvo", 0f, 0.5f);
     }
 
     //verifica se há algum inimigo no alcance
-    void atualizarTorre()
+    void atualizarAlvo()
     {
         GameObject[] inimigos = GameObject.FindGameObjectsWithTag(tagInimigo);
         float menorDist = Mathf.Infinity;
@@ -45,7 +53,19 @@ public class Torre : MonoBehaviour
     {
         if (alvo == null)
             return;
-        
+
+        if (cooldown <= 0f)
+        {
+            Atirar();
+            cooldown = 1f / taxaDisparo;
+        }
+
+        cooldown -= Time.deltaTime;
+    }
+
+    private void Atirar()
+    {
+        Debug.Log("AAAA");
     }
 
     //cria uma esfera que haje como o campo de visão
