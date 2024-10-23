@@ -17,6 +17,8 @@ public class Torre : MonoBehaviour
     [Header("campo de setup da unity")]
     [SerializeField]
     private string tagInimigo = "Inimigo";
+    public GameObject balaPrefab;
+    public Transform pontoDeOrigem;
     private void Start()
     {
         InvokeRepeating("atualizarAlvo", 0f, 0.5f);
@@ -65,7 +67,13 @@ public class Torre : MonoBehaviour
 
     private void Atirar()
     {
-        Debug.Log("AAAA");
+        GameObject balaGO = (GameObject)Instantiate(balaPrefab, pontoDeOrigem.position, pontoDeOrigem.rotation);
+        Bala bala = balaGO.GetComponent<Bala>();
+
+        if (bala != null)
+        {
+            bala.Seguir(alvo);
+        }
     }
 
     //cria uma esfera que haje como o campo de visão
