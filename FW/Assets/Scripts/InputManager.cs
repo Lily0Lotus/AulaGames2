@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
@@ -11,6 +13,23 @@ public class InputManager : MonoBehaviour
 
     [SerializeField]
     private LayerMask colocar;
+
+    public event Action OnClicked, OnExit;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnClicked?.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnExit?.Invoke();
+        }
+    }
+
+    public bool isPointerOverUI()
+        => EventSystem.current.IsPointerOverGameObject();
 
     //detecta a posição do mouse
     public Vector3 getSelectedMousePosition()
