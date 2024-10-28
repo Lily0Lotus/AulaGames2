@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6067808513540246694}
   - component: {fileID: 3100498792527481203}
   - component: {fileID: 9121256002440431625}
-  - component: {fileID: 136202538071274853}
+  - component: {fileID: 1792699421660125949}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &136202538071274853
+--- !u!114 &1792699421660125949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f26c41b2ac38fe44a81ccc67996b948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}

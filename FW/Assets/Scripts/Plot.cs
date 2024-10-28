@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Color hoverColor;
+
+    private GameObject alma;
+
+    private Renderer rend;
+    private Color corIni;
+
+    private void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+        corIni = rend.material.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        if (alma != null)
+        {
+            Debug.Log("Vai colocar na puta que pariu; para fazer: mostrar na tela");
+            return;
+        }
+
+        //posiciona uma torre
+        GameObject posAlmaTorre = PosManager.instance.pegarAlmaParaPos();
+        alma = (GameObject)Instantiate(posAlmaTorre, transform.position, transform.rotation);
+
+    }
+    private void OnMouseEnter()
+    {
+        rend.material.color = hoverColor;
+    }
+
+    private void OnMouseExit()
+    {
+        rend.material.color = corIni;
     }
 }
