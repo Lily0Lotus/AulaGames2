@@ -11,14 +11,20 @@ public class Plot : MonoBehaviour
     private Renderer rend;
     private Color corIni;
 
+    PosManager posManager;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
         corIni = rend.material.color;
+        posManager = PosManager.instance;
     }
 
     private void OnMouseDown()
     {
+        if (posManager.pegarAlmaParaPos() == null)
+            return;
+
         if (alma != null)
         {
             Debug.Log("Vai colocar na puta que pariu; para fazer: mostrar na tela");
@@ -32,6 +38,9 @@ public class Plot : MonoBehaviour
     }
     private void OnMouseEnter()
     {
+        if (posManager.pegarAlmaParaPos() == null)
+            return;
+
         rend.material.color = hoverColor;
     }
 

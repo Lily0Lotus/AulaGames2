@@ -7,7 +7,8 @@ public class PosManager : MonoBehaviour
 {
     public static PosManager instance;
 
-    public GameObject standarAlmaPrefab;
+    public GameObject pastolaAlmaPrefab;
+    public GameObject raizExplosivaAlmaPrefab;
 
     private GameObject posAlmaTorre;
 
@@ -22,13 +23,13 @@ public class PosManager : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
-    {
-        posAlmaTorre = standarAlmaPrefab;
-    }
-
     public GameObject pegarAlmaParaPos()
     {
         return posAlmaTorre;
+    }
+
+    public void SetTorrePos(GameObject alma)
+    {
+        posAlmaTorre = alma;
     }
 }
