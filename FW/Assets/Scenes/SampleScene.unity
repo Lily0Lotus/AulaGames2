@@ -7784,11 +7784,14 @@ MonoBehaviour:
   spawnPoint: {fileID: 843148901}
   inimigoPrefab: {fileID: 7398912365120397601, guid: 538daf91e3d97c847a1526babe45bc85, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
   contadorMax: 14
+  tempo: 60
+  taxaIni: 2
+  tempoTaxa: 60
 --- !u!4 &1468118355
 Transform:
   m_ObjectHideFlags: 0
@@ -7833,7 +7836,7 @@ MonoBehaviour:
   spawnPoint1: {fileID: 344236337}
   inimigoPrefab: {fileID: 7398912365120397601, guid: 07844424bb7ea5b4c9c8b9f78c182b17, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
@@ -7853,7 +7856,7 @@ MonoBehaviour:
   spawnPoint2: {fileID: 1681903513}
   inimigoPrefab: {fileID: 7398912365120397601, guid: c7e3178b5bc9ee244bf64e2b155e4c20, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
@@ -7873,7 +7876,7 @@ MonoBehaviour:
   spawnPoint3: {fileID: 1722530205}
   inimigoPrefab: {fileID: 7398912365120397601, guid: 83d8744215abd294f93a2a5b8f42bf5b, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
@@ -7893,7 +7896,7 @@ MonoBehaviour:
   spawnPoint5: {fileID: 932330158}
   inimigoPrefab: {fileID: 7398912365120397601, guid: b40ec9e36584b4a419c1a3d7ef9f0375, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
@@ -7913,7 +7916,7 @@ MonoBehaviour:
   spawnPoint4: {fileID: 595703413}
   inimigoPrefab: {fileID: 7398912365120397601, guid: 570c6c5b6959aeb47a30dd06f672b983, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10
@@ -7933,7 +7936,7 @@ MonoBehaviour:
   spawnPoint6: {fileID: 1968328145}
   inimigoPrefab: {fileID: 7398912365120397601, guid: 10ea283882523864ea3e18cf612a0437, type: 3}
   numMinInimigos: 1
-  numMaxInimigos: 5
+  numMaxInimigos: 3
   timerMin: 2
   timerMax: 3
   contadorMin: 10

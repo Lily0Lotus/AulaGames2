@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 30
+  dano: 25
+  raioExplosao: 0

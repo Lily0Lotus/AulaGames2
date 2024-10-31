@@ -5,7 +5,10 @@ using UnityEngine;
 public class Inimigo : MonoBehaviour
 {
     [SerializeField]
-    public float spd = 2f;
+    private float spd = 2f;
+
+    [SerializeField]
+    private float vida = 50;
 
     private Transform target;
     private int wavepointIndex = 0;
@@ -13,6 +16,20 @@ public class Inimigo : MonoBehaviour
     void Start()
     {
         target = Waypoint.waypoints[0];
+    }
+
+    public void LevarDano(int quantidade)
+    {
+        vida -= quantidade;
+        if (vida <= 0)
+        {
+            Morra();
+        }
+    }
+
+    void Morra()
+    {
+        Destroy(gameObject);
     }
 
     void Update()

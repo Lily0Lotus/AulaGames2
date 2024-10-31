@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1097345603452155004}
   - component: {fileID: 8656093184633819131}
   - component: {fileID: 7148027243385447420}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5859581850081256877}
   - component: {fileID: 7380021456758158050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpritePato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8764944068929239109}
   - component: {fileID: 5879152302517792070}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992588190014865993}
   - component: {fileID: 8568071863123271334}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: to
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2659500898013296760}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PatoParente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4478922506538724606}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PontoOrigem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

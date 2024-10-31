@@ -33,6 +33,15 @@ public class WaveSpawner1 : MonoBehaviour
 
     private float cont = 0;
 
+    [SerializeField]
+    private float tempo = 60f;
+
+    [SerializeField]
+    private int taxaIni = 2;
+
+    [SerializeField]
+    private float tempoTaxa = 60f;
+
     private void Awake()
     {
         timer = Random.Range(timerMin, timerMax);
@@ -48,7 +57,20 @@ public class WaveSpawner1 : MonoBehaviour
             cont = timer;
         }
         cont -= Time.deltaTime;
+
+        tempoTaxa -= Time.deltaTime;
+        if (tempoTaxa <= 0f)
+        {
+            AumentarTaxaSpawn();
+        }
     }
+
+    void AumentarTaxaSpawn()
+    {
+        numMaxInimigos = numMaxInimigos + taxaIni;
+        tempoTaxa = tempo;
+    }
+
 
     IEnumerator sumonarOnda ()
     {

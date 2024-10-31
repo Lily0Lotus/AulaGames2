@@ -197,7 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8eddf3a05bdd414a94468a204794844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagInimigo: Inimigo
   delay: 3
-  raio: 3
+  raioExplosao: 3.5
   efeitoExplosao: {fileID: 7905499410005926799, guid: f24c4cdba7237f540900b1fe3cb48321, type: 3}
