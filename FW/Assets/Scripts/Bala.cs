@@ -7,7 +7,7 @@ public class Bala : MonoBehaviour
     private Transform alvo;
 
     [SerializeField]
-    public float vel = 70f;
+    private float vel = 70f;
 
     public void Seguir(Transform _alvo)
     { 

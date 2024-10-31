@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1097345603452155004}
-  - component: {fileID: 8656093184633819131}
   - component: {fileID: 7148027243385447420}
   m_Layer: 0
-  m_Name: Pato
+  m_Name: Raiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,25 +33,6 @@ Transform:
   - {fileID: 8764944068929239109}
   m_Father: {fileID: 2659500898013296760}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8656093184633819131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533621256568483193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622dd059bd8a2eb4eb9906541ed5d59d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alvo: {fileID: 0}
-  alcance: 6
-  taxaDisparo: 2
-  cooldown: 0
-  tagInimigo: Inimigo
-  balaPrefab: {fileID: 2776309792406302398, guid: b902139f3cad9184db73f78b3ebd7903, type: 3}
-  pontoDeOrigem: {fileID: 0}
 --- !u!135 &7148027243385447420
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -101,7 +81,7 @@ Transform:
   m_GameObject: {fileID: 3317722047482012926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.035320997, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -147,7 +127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4241d139149960648820524ae8bb122c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,6 +161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2659500898013296760}
+  - component: {fileID: 1955213239149906899}
   m_Layer: 0
   m_Name: RaizParente
   m_TagString: Untagged
@@ -204,3 +185,19 @@ Transform:
   - {fileID: 1097345603452155004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1955213239149906899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679397185469610802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eddf3a05bdd414a94468a204794844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagInimigo: Inimigo
+  delay: 3
+  raio: 3
+  efeitoExplosao: {fileID: 7905499410005926799, guid: f24c4cdba7237f540900b1fe3cb48321, type: 3}
