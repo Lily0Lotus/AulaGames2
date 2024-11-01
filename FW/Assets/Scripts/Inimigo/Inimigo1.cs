@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inimigo1 : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class Inimigo1 : MonoBehaviour
         if (Vector3.Distance(transform.position, target1.position) <= 0.4f)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
         /*maisVida -= Time.deltaTime;
