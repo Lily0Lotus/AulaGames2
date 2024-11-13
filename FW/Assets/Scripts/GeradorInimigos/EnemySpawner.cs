@@ -14,7 +14,6 @@ public class WaveSpawner : MonoBehaviour
     private int numMinInimigos = 1;
     [SerializeField]
     private int numMaxInimigos = 3;
-
     private int numSpawn = 0;
 
     //Timer para cada grupo spawnar
@@ -22,7 +21,6 @@ public class WaveSpawner : MonoBehaviour
     private int timerMin = 3;
     [SerializeField]
     private int timerMax = 6;
-
     private int timer = 0;
 
     //Timer para as sombras começarem a vir
@@ -30,7 +28,6 @@ public class WaveSpawner : MonoBehaviour
     private int contadorMin = 3;
     [SerializeField]
     private int contadorMax = 6;
-
     private float cont = 0;
 
     [SerializeField]

@@ -11,12 +11,12 @@ public class Inimigo : MonoBehaviour
     [SerializeField]
     private float vida = 50;
 
-    private Transform target;
-    private int wavepointIndex = 0;
+    [SerializeField]
+    private int variacaoZ;
 
-    void Start()
+    private void Awake()
     {
-        target = Waypoint.waypoints[0];
+        this.transform.Translate(Vector3.forward * Random.Range(-variacaoZ, variacaoZ));
     }
 
     public void LevarDano(int quantidade)
@@ -36,13 +36,14 @@ public class Inimigo : MonoBehaviour
     void Update()
     {
         //Faz o inimigo se mover
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * spd * Time.deltaTime, Space.World);
+        this.transform.Translate(Vector3.left * spd * Time.deltaTime);
+    }
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Finish")
         {
-            Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
-        };
+        }
     }
 }
