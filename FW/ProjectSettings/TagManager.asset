@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - "Obstru\xE7\xE3o"
+  - Selecionavel
   layers:
   - Default
   - TransparentFX

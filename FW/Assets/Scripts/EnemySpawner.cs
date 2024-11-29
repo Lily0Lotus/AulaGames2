@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WaveSpawner4 : MonoBehaviour
+public class WaveSpawner : MonoBehaviour
 {
-    public Transform spawnPoint4;
+    public Transform spawnPoint;
 
     public Transform inimigoPrefab;
 
@@ -14,45 +14,42 @@ public class WaveSpawner4 : MonoBehaviour
     private int numMinInimigos = 1;
     [SerializeField]
     private int numMaxInimigos = 3;
-
     private int numSpawn = 0;
 
     //Timer para cada grupo spawnar
     [SerializeField]
-    private int timerMin = 3;
+    private int timerGerarMin = 3;
     [SerializeField]
-    private int timerMax = 6;
-
+    private int timerGerarMax = 6;
     private int timer = 0;
 
     //Timer para as sombras começarem a vir
     [SerializeField]
-    private int contadorMin = 3;
+    private int timerMin = 3;
     [SerializeField]
-    private int contadorMax = 6;
-
+    private int timerMax = 6;
     private float cont = 0;
 
     [SerializeField]
     private float tempo = 60f;
 
     [SerializeField]
-    private int taxaIni = 2;
+    private int aumentarQuantIni = 2;
 
     [SerializeField]
     private float tempoTaxa = 60f;
 
     private void Awake()
     {
-        timer = Random.Range(timerMin, timerMax);
-        cont = Random.Range(contadorMin, contadorMax);
+        timer = Random.Range(timerGerarMin, timerGerarMax);
+        cont = Random.Range(timerMin, timerMax);
     }
 
-    private void Update()
+    private void Update ()
     {
         if (cont <= 0f)
         {
-            cont = Random.Range(contadorMin, contadorMax);
+            cont = Random.Range(timerMin, timerMax);
             StartCoroutine(sumonarOnda());
             cont = timer;
         }
@@ -61,13 +58,14 @@ public class WaveSpawner4 : MonoBehaviour
         tempoTaxa -= Time.deltaTime;
         if (tempoTaxa <= 0f)
         {
-            AumentarTaxaSpawn();
+            AumentarTaxaIni();
         }
     }
 
-    void AumentarTaxaSpawn()
+    void AumentarTaxaIni()
     {
-        numMaxInimigos = numMaxInimigos + taxaIni;
+        numMaxInimigos = numMaxInimigos + aumentarQuantIni;
+        numMinInimigos = numMinInimigos + aumentarQuantIni;
         tempoTaxa = tempo;
     }
 
@@ -83,6 +81,6 @@ public class WaveSpawner4 : MonoBehaviour
 
     void sumonarinimigo() 
     {
-        Instantiate(inimigoPrefab, spawnPoint4.position, spawnPoint4.rotation);
+        Instantiate(inimigoPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

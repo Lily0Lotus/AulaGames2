@@ -5718,6 +5718,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5815,6 +5816,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb960001f94f69549bdf11627d6c4b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966610999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8338,13 +8351,13 @@ MonoBehaviour:
   inimigoPrefab: {fileID: 7398912365120397601, guid: 538daf91e3d97c847a1526babe45bc85, type: 3}
   numMinInimigos: 1
   numMaxInimigos: 3
-  timerMin: 2
-  timerMax: 3
-  contadorMin: 10
-  contadorMax: 14
+  timerGerarMin: 3
+  timerGerarMax: 6
+  timerMin: 3
+  timerMax: 6
   tempo: 60
-  taxaIni: 2
-  tempoTaxa: 60
+  aumentarQuantIni: 2
+  tempoTaxa: 30
 --- !u!4 &1468118355
 Transform:
   m_ObjectHideFlags: 0
@@ -11292,7 +11305,7 @@ GameObject:
   - component: {fileID: 2002926116}
   m_Layer: 0
   m_Name: teste
-  m_TagString: Untagged
+  m_TagString: Selecionavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11358,7 +11371,7 @@ Transform:
   m_GameObject: {fileID: 2002926115}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.28, y: 1.63, z: -0.008517689}
+  m_LocalPosition: {x: -7.07, y: 1.63, z: -0.008517689}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
